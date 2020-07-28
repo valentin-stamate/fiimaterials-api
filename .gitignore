@@ -4,3 +4,4 @@ venv
 build
 .idea
 server/secrets.py
+*__pycache__
