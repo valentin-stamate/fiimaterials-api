@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .auth import Student
-from .models import Class
+from .models import Class, UsefulLink
 
 
 class StudentAdmin(UserAdmin):
@@ -19,6 +19,11 @@ class ClassAdmin(admin.ModelAdmin):
   search_fields = ['class_name', 'class_year']
 
 
+class UsefulLinkAdmin(admin.ModelAdmin):
+  list_display = ['name']
+  search_fields = ['name', 'type']
+
+
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Class, ClassAdmin)
-
+admin.site.register(UsefulLink, UsefulLinkAdmin)
