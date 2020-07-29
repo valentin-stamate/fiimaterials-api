@@ -15,7 +15,7 @@ class StudentAdmin(UserAdmin):
 
 
 class ClassAdmin(admin.ModelAdmin):
-  list_display = ['class_name', 'class_year', 'average_rating', ]
+  list_display = ['class_name', 'class_year', 'average_rating', 'votes_number']
   search_fields = ['class_name', 'class_year']
 
 
