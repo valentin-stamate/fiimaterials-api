@@ -25,5 +25,11 @@ class UsefulLink(models.Model):
   type = models.IntegerField(choices=LINK_TYPES)
 
 
+class StudentRating(models.Model):
+  student = models.ForeignKey(Student, on_delete=models.CASCADE)
+
+  class_name = models.ForeignKey(Class, on_delete=models.CASCADE)
+  rating = models.IntegerField()
+
 
 
