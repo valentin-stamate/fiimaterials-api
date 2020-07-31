@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .auth import Student
-from .models import Class, UsefulLink, StudentRating
+from .models import Class, Link, StudentRating
 
 
 class StudentAdmin(UserAdmin):
@@ -15,12 +15,13 @@ class StudentAdmin(UserAdmin):
 
 
 class ClassAdmin(admin.ModelAdmin):
-  list_display = ['class_name', 'class_year', 'average_rating', 'votes_number']
-  search_fields = ['class_name', 'class_year']
+  list_display = ['name', 'name_short', 'year', 'average_rating', 'votes_number']
+  search_fields = ['name', 'year']
+  readonly_fields = ['updated_at']
 
 
-class UsefulLinkAdmin(admin.ModelAdmin):
-  list_display = ['name']
+class LinkAdmin(admin.ModelAdmin):
+  list_display = ['name', 'type']
   search_fields = ['name', 'type']
 
 
@@ -31,5 +32,5 @@ class StudentRatingAdmin(admin.ModelAdmin):
 
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Class, ClassAdmin)
-admin.site.register(UsefulLink, UsefulLinkAdmin)
+admin.site.register(Link, LinkAdmin)
 admin.site.register(StudentRating, StudentRatingAdmin)
