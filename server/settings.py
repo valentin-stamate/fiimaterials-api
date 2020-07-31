@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
 
     'api.apps.ApiConfig',
 ]
@@ -60,6 +61,12 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 AUTH_USER_MODEL = 'api.Student'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 ROOT_URLCONF = 'server.urls'
 
