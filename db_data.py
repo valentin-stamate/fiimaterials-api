@@ -66,7 +66,52 @@ classes = [
     "site_link": "https://profs.info.uaic.ro/~sd",
     "site_password": "sd20192020",
     "year": 1,
-  }
+    "semester": 1,
+  },
+  {
+    "name": "Computer Architecture and Operating Systems",
+    "name_short": "CAOS",
+    "credits": 5,
+    "material_link": "http://bit.ly/31PbY5b",
+    "site_link": "https://profs.info.uaic.ro/~rvlad/stud.html",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "name": "Logics for Computer Science",
+    "name_short": "Logics",
+    "credits": 6,
+    "material_link": "http://bit.ly/2SnbW14",
+    "site_link": "https://profs.info.uaic.ro/~rvlad/stud.html",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "name": "Mathematics",
+    "name_short": "Math",
+    "credits": 5,
+    "material_link": "http://bit.ly/2UQg7Eq",
+    "site_link": "https://profs.info.uaic.ro/~andreea.arusoaie/mate.html",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "name": " Introduction to Programming",
+    "name_short": "IP",
+    "credits": 4,
+    "material_link": "http://bit.ly/31NKKvN",
+    "site_link": "http://www.edusoft.ro/introp",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "name": "English Language I",
+    "name_short": "English",
+    "credits": 4,
+    "site_link": "https://profs.info.uaic.ro/~augusto.perez",
+    "year": 1,
+    "semester": 1
+  },
 ]
 
 # year = models.IntegerField()
