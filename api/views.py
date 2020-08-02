@@ -31,7 +31,7 @@ def get_links(request):
 
   data = []
   for link in links:
-    link_serializer = LinkSerializer(Link)
+    link_serializer = LinkSerializer(link)
     data.append(link_serializer.data)
 
   return Response(data=data, status=status.HTTP_200_OK)

@@ -112,6 +112,113 @@ classes = [
     "year": 1,
     "semester": 1
   },
+  {
+    "name": "Competitive Programming",
+    "name_short": "CP",
+    "credits": 3,
+    "site_link": "http://students.info.uaic.ro/~alexandru.ionita/pc/index.html",
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "name": "Physical Education",
+    "name_short": "FE",
+    "credits": 1,
+    "year": 1,
+    "semester": 1
+  },
+  {
+    "name": "Educational Psychology",
+    "name_short": "EP",
+    "credits": 5,
+    "year": 1,
+    "semester": 1
+  },
+
+  {
+    "name": "Object Oriented Programming",
+    "name_short": "OOP",
+    "credits": 6,
+    "material_link": "http://bit.ly/39Wbspf",
+    "site_link": "https://sites.google.com/site/fiicoursepoo",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Operating Systems",
+    "name_short": "OS",
+    "credits": 6,
+    "material_link": "http://bit.ly/2ISTg3W",
+    "site_link": "https://profs.info.uaic.ro/~vidrascu/SO",
+    "site_password": "so2020 1+2=3",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Algebraic Foundations of Computer Science",
+    "name_short": "AFCS",
+    "credits": 5,
+    "material_link": "http://bit.ly/2TT0zyW",
+    "site_link": "https://profs.info.uaic.ro/~fltiplea/AFCS/AFCS.html",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Probabilities and Statistics",
+    "name_short": "PS",
+    "credits": 4,
+    "material_link": "http://bit.ly/2ITqL6g",
+    "site_link": "https://profs.info.uaic.ro/~adrian.zalinescu/PS.html",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Algorithms Design",
+    "name_short": "AD",
+    "credits": 5,
+    "material_link": "http://bit.ly/2UafO5w",
+    "site_link": "https://sites.google.com/site/fiicoursepa",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "English Language II",
+    "name_short": "English",
+    "credits": 4,
+    "site_link": "https://profs.info.uaic.ro/~augusto.perez",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Competitive Programming",
+    "name_short": "CP",
+    "credits": 3,
+    "site_link": "http://students.info.uaic.ro/~alexandru.ionita/pc/index.html",
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Physical Education",
+    "name_short": "FE",
+    "credits": 1,
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Ethics and Academic Integrity",
+    "name_short": "EP",
+    "credits": 3,
+    "year": 1,
+    "semester": 2,
+  },
+  {
+    "name": "Pedagogy I",
+    "name_short": "EP",
+    "credits": 5,
+    "year": 1,
+    "semester": 2,
+  },
+
 ]
 
 # year = models.IntegerField()

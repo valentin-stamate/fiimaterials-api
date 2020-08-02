@@ -13,7 +13,9 @@ class Class(models.Model):
   material_link = models.CharField(max_length=50, blank=True)
   site_link = models.CharField(max_length=50, blank=True)
   site_password = models.CharField(max_length=20, blank=True)
+
   year = models.IntegerField()
+  semester = models.IntegerField()
 
   votes_number = models.IntegerField(default=0)
   updated_at = models.DateField(auto_now=True)
