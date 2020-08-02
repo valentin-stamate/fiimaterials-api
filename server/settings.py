@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import django_heroku
+
 import os
 from .secrets import SECRET_KEY_SECRET
 
@@ -21,12 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY_SECRET
+SECRET_KEY = '93$_m*%vd_^h7@vovz12xc+g%m3+&!5*3y-v404)$#&l8%loo4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -57,7 +59,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
+    'http://localhost:3000',
+    'http://fiimateriale.firebaseapp.com',
+    'https://fiimateriale.firebaseapp.com',
 ]
 
 AUTH_USER_MODEL = 'api.Student'
@@ -138,3 +142,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+django_heroku.settings(locals())

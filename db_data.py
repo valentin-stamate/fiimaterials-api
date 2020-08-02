@@ -219,6 +219,24 @@ classes = [
     "semester": 2,
   },
 
+
+  {
+    "name": "Coming Soon",
+    "name_short": "OS",
+    "credits": 6,
+    "site_password": "so2020 1+2=3",
+    "year": 2,
+    "semester": 1,
+  },
+
+  {
+    "name": "Coming Soon",
+    "name_short": "OS",
+    "credits": 6,
+    "site_password": "so2020 1+2=3",
+    "year": 3,
+    "semester": 1,
+  },
 ]
 
 # year = models.IntegerField()
