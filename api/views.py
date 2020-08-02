@@ -11,10 +11,11 @@ from .models import StudentRating, Class, Link
 from .serializers import ClassSerializer, LinkSerializer
 
 
-@api_view(http_method_names=['GET'])
+@api_view(http_method_names=['POST'])
 def get_classes(request):
 
-  classes = Class.objects.all().filter(year=1)
+  year = request.data["year"]
+  classes = Class.objects.all().filter(year=year)
 
   data = []
   for cls in classes:
