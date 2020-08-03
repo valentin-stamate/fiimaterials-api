@@ -61,6 +61,8 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://fiimaterials.web.app',
     'https://fiimaterials.web.app',
+    'http://fiimaterials.valentinstamate.com',
+    'https://fiimaterials.valentinstamate.com',
 ]
 
 AUTH_USER_MODEL = 'api.Student'
