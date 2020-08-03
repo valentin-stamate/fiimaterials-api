@@ -59,8 +59,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'http://fiimateriale.firebaseapp.com',
-    'https://fiimateriale.firebaseapp.com',
+    'http://fiimaterials.web.app',
+    'https://fiimaterials.web.app',
 ]
 
 AUTH_USER_MODEL = 'api.Student'
