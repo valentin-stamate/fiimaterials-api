@@ -15,7 +15,7 @@ class StudentAdmin(UserAdmin):
 
 
 class ClassAdmin(admin.ModelAdmin):
-  list_display = ['name', 'name_short', 'year', 'average_rating', 'votes_number']
+  list_display = ['id', 'name', 'name_short', 'year', 'average_rating', 'votes_number']
   search_fields = ['name', 'year']
   readonly_fields = ['updated_at']
 

@@ -93,7 +93,7 @@ classes = [
     "material_link": "http://bit.ly/2UQg7Eq",
     "site_link": "https://profs.info.uaic.ro/~andreea.arusoaie/mate.html",
     "year": 1,
-    "semester": 1
+    "semester": 1,
   },
   {
     "name": " Introduction to Programming",
@@ -113,7 +113,7 @@ classes = [
     "semester": 1
   },
   {
-    "name": "Competitive Programming",
+    "name": "Competitive Programming V",
     "name_short": "CP",
     "credits": 3,
     "site_link": "http://students.info.uaic.ro/~alexandru.ionita/pc/index.html",
@@ -121,7 +121,7 @@ classes = [
     "semester": 1
   },
   {
-    "name": "Physical Education",
+    "name": "Physical Education I",
     "name_short": "FE",
     "credits": 1,
     "year": 1,
@@ -190,7 +190,7 @@ classes = [
     "semester": 2,
   },
   {
-    "name": "Competitive Programming",
+    "name": "Competitive Programming VI",
     "name_short": "CP",
     "credits": 3,
     "site_link": "http://students.info.uaic.ro/~alexandru.ionita/pc/index.html",
@@ -198,7 +198,7 @@ classes = [
     "semester": 2,
   },
   {
-    "name": "Physical Education",
+    "name": "Physical Education II",
     "name_short": "FE",
     "credits": 1,
     "year": 1,
@@ -221,7 +221,7 @@ classes = [
 
 
   {
-    "name": "Coming Soon",
+    "name": "Second Year Coming Soon",
     "name_short": "OS",
     "credits": 6,
     "site_password": "so2020 1+2=3",
@@ -230,7 +230,7 @@ classes = [
   },
 
   {
-    "name": "Coming Soon",
+    "name": "Third Year Coming Soon",
     "name_short": "OS",
     "credits": 6,
     "site_password": "so2020 1+2=3",
@@ -239,14 +239,26 @@ classes = [
   },
 ]
 
-# year = models.IntegerField()
-#   name = models.CharField(max_length=50)
-#   name_short = models.CharField(max_length=10)
-#   average_rating = models.FloatField(default=0)
-#   credits = models.IntegerField()
-#   material_link = models.CharField(max_length=50, blank=True)
-#   site_link = models.CharField(max_length=50, blank=True)
-#   site_password = models.CharField(max_length=20, blank=True)
+# name = models.CharField(max_length=50, unique=True)
+# name_short = models.CharField(max_length=10)
+# average_rating = models.FloatField(default=0)
+# credits = models.IntegerField()
+# material_link = models.CharField(max_length=50, blank=True)
+# site_link = models.CharField(max_length=50, blank=True)
+# site_password = models.CharField(max_length=20, blank=True)
 #
-#   votes_number = models.IntegerField(default=0)
-#   updated_at = models.DateField(auto_now=True)
+# year = models.IntegerField()
+# semester = models.IntegerField()
+#
+# votes_number = models.IntegerField(default=0)
+# updated_at = models.DateField(auto_now=True)
+
+# {
+#     "name": "Mathematics",
+#     "name_short": "Math",
+#     "credits": 5,
+#     "material_link": "http://bit.ly/2UQg7Eq",
+#     "site_link": "https://profs.info.uaic.ro/~andreea.arusoaie/mate.html",
+#     "year": 1,
+#     "semester": 1,
+#   },

@@ -9,9 +9,12 @@ django.setup()
 from api.auth import Student
 from api.serializers import LinkSerializer, ClassSerializer
 from db_data import links, classes
+from api.models import Class
 
 
 def populate():
+
+  Class.objects.all().delete()
 
   for link in links:
     link_serializer = LinkSerializer(data=link)

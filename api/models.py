@@ -10,8 +10,8 @@ class Class(models.Model):
   name_short = models.CharField(max_length=10)
   average_rating = models.FloatField(default=0)
   credits = models.IntegerField()
-  material_link = models.CharField(max_length=50, blank=True)
-  site_link = models.CharField(max_length=50, blank=True)
+  material_link = models.CharField(max_length=100, blank=True)
+  site_link = models.CharField(max_length=100, blank=True)
   site_password = models.CharField(max_length=20, blank=True)
 
   year = models.IntegerField()
