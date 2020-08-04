@@ -5,10 +5,11 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.authtoken.models import Token
 
 from api.auth import Student
 from .models import StudentRating, Class, Link
-from .serializers import ClassSerializer, LinkSerializer
+from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer
 
 
 @api_view(http_method_names=['POST'])
@@ -45,3 +46,17 @@ class UserData(APIView):
   def get(self, request):
     return Response("done")
 
+
+# TODO check for duplicate username
+@api_view(http_method_names=['POST'])
+def signup_user(request):
+
+  signup_serializer = SignupStudentSerializer(data=request.data)
+  if signup_serializer.is_valid():
+    student = signup_serializer.save()
+  else:
+    return Response(status=status.HTTP_206_PARTIAL_CONTENT)
+
+  token = Token.objects.get(user=student).key
+
+  return Response(data={'token': token}, status=status.HTTP_201_CREATED)
