@@ -68,7 +68,7 @@ def login_user(request):
   login_serializer = LoginStudentSerializer(data=request.data)
 
   if not login_serializer.is_valid():
-    return Response(status=status.HTTP_206_PARTIAL_CONTENT)
+    return Response(status=status.HTTP_400_BAD_REQUEST)
 
   student = login_serializer.save()
 
@@ -76,6 +76,19 @@ def login_user(request):
 
   return Response(data={'token': token}, status=status.HTTP_200_OK)
 
+
+class GetUser(APIView):
+  authentication_classes = [TokenAuthentication]
+  permission_classes = [IsAuthenticated]
+
+  def post(self, request):
+
+    data = {
+      'username': request.user.username,
+      'email': request.user.email,
+    }
+
+    return Response(data=data, status=status.HTTP_200_OK)
 
 
 
