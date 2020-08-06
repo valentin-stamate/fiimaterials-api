@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -7,8 +6,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 
-from api.auth import Student
-from .models import StudentRating, Class, Link
+from .models import ClassRating, Class, Link
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer
 
 
@@ -91,7 +89,29 @@ class GetUser(APIView):
     return Response(data=data, status=status.HTTP_200_OK)
 
 
+class SetRating(APIView):
+  authentication_classes = [TokenAuthentication]
+  permission_classes = [IsAuthenticated]
+
+  def post(self, request):
+
+    user = request.user
+    new_rating = request.data['rating']
+
+    if new_rating > 5 or new_rating < 1:
+      return Response(status=status.HTTP_400_BAD_REQUEST)
+
+    class_instance = Class.objects.get(id=request.data['class_id'])
+    class_rating, created = ClassRating.objects.get_or_create(
+      student=user,
+      class_name=class_instance,
+    )
+
+    class_rating.rating = new_rating
+    class_rating.save()
+
+    return Response(status=status.HTTP_200_OK)
 
 
-
+# TODO add __str__ to all models
 

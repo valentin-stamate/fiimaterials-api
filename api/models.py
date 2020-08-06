@@ -4,9 +4,9 @@ from .auth import Student
 
 
 class Class(models.Model):
-  id = models.AutoField(primary_key=True)
+  id = models.IntegerField(primary_key=True, unique=True)
 
-  name = models.CharField(max_length=50, unique=True)
+  name = models.CharField(max_length=50)
   name_short = models.CharField(max_length=10)
   average_rating = models.FloatField(default=0)
   credits = models.IntegerField()
@@ -20,6 +20,9 @@ class Class(models.Model):
   votes_number = models.IntegerField(default=0)
   updated_at = models.DateField(auto_now=True)
 
+  def __str__(self):
+    return self.name
+
 
 class Link(models.Model):
 
@@ -32,12 +35,16 @@ class Link(models.Model):
   link = models.CharField(max_length=50, unique=True)
   type = models.IntegerField(choices=LINK_TYPES)
 
+  def __str__(self):
+    return self.name
 
-class StudentRating(models.Model):
+
+class ClassRating(models.Model):
   student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
   class_name = models.ForeignKey(Class, on_delete=models.CASCADE)
-  rating = models.IntegerField()
+  rating = models.IntegerField(default=0)
+
 
 
 

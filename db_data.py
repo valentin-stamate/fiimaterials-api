@@ -59,6 +59,7 @@ links = [
 
 classes = [
   {
+    "id": 0,
     "name": "Data Structures",
     "name_short": "DS",
     "credits": 6,
@@ -69,6 +70,7 @@ classes = [
     "semester": 1,
   },
   {
+    "id": 1,
     "name": "Computer Architecture and Operating Systems",
     "name_short": "CAOS",
     "credits": 5,
@@ -78,6 +80,7 @@ classes = [
     "semester": 1
   },
   {
+    "id": 2,
     "name": "Logics for Computer Science",
     "name_short": "Logics",
     "credits": 6,
@@ -87,6 +90,7 @@ classes = [
     "semester": 1
   },
   {
+    "id": 3,
     "name": "Mathematics",
     "name_short": "Math",
     "credits": 5,
@@ -96,6 +100,7 @@ classes = [
     "semester": 1,
   },
   {
+    "id": 4,
     "name": " Introduction to Programming",
     "name_short": "IP",
     "credits": 4,
@@ -105,6 +110,7 @@ classes = [
     "semester": 1
   },
   {
+    "id": 5,
     "name": "English Language I",
     "name_short": "English",
     "credits": 4,
@@ -113,6 +119,7 @@ classes = [
     "semester": 1
   },
   {
+    "id": 6,
     "name": "Competitive Programming V",
     "name_short": "CP",
     "credits": 3,
@@ -121,6 +128,7 @@ classes = [
     "semester": 1
   },
   {
+    "id": 7,
     "name": "Physical Education I",
     "name_short": "FE",
     "credits": 1,
@@ -128,6 +136,7 @@ classes = [
     "semester": 1
   },
   {
+    "id": 8,
     "name": "Educational Psychology",
     "name_short": "EP",
     "credits": 5,
@@ -136,6 +145,7 @@ classes = [
   },
 
   {
+    "id": 9,
     "name": "Object Oriented Programming",
     "name_short": "OOP",
     "credits": 6,
@@ -145,6 +155,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 10,
     "name": "Operating Systems",
     "name_short": "OS",
     "credits": 6,
@@ -155,6 +166,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 11,
     "name": "Algebraic Foundations of Computer Science",
     "name_short": "AFCS",
     "credits": 5,
@@ -164,6 +176,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 12,
     "name": "Probabilities and Statistics",
     "name_short": "PS",
     "credits": 4,
@@ -173,6 +186,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 13,
     "name": "Algorithms Design",
     "name_short": "AD",
     "credits": 5,
@@ -182,6 +196,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 14,
     "name": "English Language II",
     "name_short": "English",
     "credits": 4,
@@ -190,6 +205,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 15,
     "name": "Competitive Programming VI",
     "name_short": "CP",
     "credits": 3,
@@ -198,6 +214,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 16,
     "name": "Physical Education II",
     "name_short": "FE",
     "credits": 1,
@@ -205,6 +222,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 17,
     "name": "Ethics and Academic Integrity",
     "name_short": "EP",
     "credits": 3,
@@ -212,6 +230,7 @@ classes = [
     "semester": 2,
   },
   {
+    "id": 18,
     "name": "Pedagogy I",
     "name_short": "EP",
     "credits": 5,
@@ -221,6 +240,7 @@ classes = [
 
 
   {
+    "id": 19,
     "name": "Second Year Coming Soon",
     "name_short": "OS",
     "credits": 6,
@@ -230,6 +250,7 @@ classes = [
   },
 
   {
+    "id": 20,
     "name": "Third Year Coming Soon",
     "name_short": "OS",
     "credits": 6,

@@ -24,7 +24,8 @@ def populate():
   for class_ in classes:
     class_serializer = ClassSerializer(data=class_)
     if class_serializer.is_valid():
-      class_serializer.save()
+      ins = class_serializer.save()
+      print(ins.__str__() + " created or updated")
 
   return 0
 

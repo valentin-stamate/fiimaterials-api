@@ -3,6 +3,7 @@ from rest_framework import serializers
 from api.models import Link, Class, Student
 import re
 
+
 class LinkSerializer(serializers.ModelSerializer):
   class Meta:
     model = Link
@@ -12,7 +13,7 @@ class LinkSerializer(serializers.ModelSerializer):
 class ClassSerializer(serializers.ModelSerializer):
   class Meta:
     model = Class
-    fields = ['name', 'name_short', 'average_rating', 'credits', 'year', 'semester',
+    fields = ['id', 'name', 'name_short', 'average_rating', 'credits', 'year', 'semester',
               'material_link', 'site_link', 'site_password', 'votes_number']
 
 
@@ -71,6 +72,8 @@ class LoginStudentSerializer(serializers.Serializer):
 
   def update(self, instance, validated_data):
     pass
+
+
 
 
 
