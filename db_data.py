@@ -57,6 +57,25 @@ links = [
   }
 ]
 
+resources = [
+  {
+    "id": 0,
+    "title": "Test One",
+    "description": "Lorem ipsum dolor sit amet",
+    "image_url": "https://img.youtube.com/vi/lPx0n6X0d8g/0.jpg",
+    "link_url": "https://www.youtube.com/watch?v=lPx0n6X0d8g",
+    "tag_list": "oop fun algorithms",
+  },
+  {
+    "id": 1,
+    "title": "Test Two",
+    "description": "Lorem ipsum dolor sit amet",
+    "image_url": "https://img.youtube.com/vi/lPx0n6X0d8g/0.jpg",
+    "link_url": "https://www.youtube.com/watch?v=lPx0n6X0d8g",
+    "tag_list": "oop fun algorithms",
+  },
+]
+
 classes = [
   {
     "id": 0,

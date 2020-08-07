@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Link, Class, Student
+from api.models import Link, Class, Student, Resource
 import re
 
 
@@ -74,8 +74,11 @@ class LoginStudentSerializer(serializers.Serializer):
     pass
 
 
+class ResourceSerializer(serializers.ModelSerializer):
 
-
+  class Meta:
+    model = Resource
+    fields = ['id', 'title', 'description', 'image_url', 'link_url', 'tag_list']
 
 
 

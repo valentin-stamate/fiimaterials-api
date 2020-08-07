@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .auth import Student
-from .models import Class, Link, ClassRating
+from .models import Class, Link, ClassRating, Resource
 
 
 class StudentAdmin(UserAdmin):
@@ -30,8 +30,13 @@ class ClassRatingAdmin(admin.ModelAdmin):
   search_fields = ['student', 'class_name']
 
 
+class ResourceAdmin(admin.ModelAdmin):
+  list_display = ['id', 'title', 'tag_list']
+  search_fields = ['title', 'tag_list']
+
+
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Class, ClassAdmin)
 admin.site.register(Link, LinkAdmin)
 admin.site.register(ClassRating, ClassRatingAdmin)
-
+admin.site.register(Resource, ResourceAdmin)

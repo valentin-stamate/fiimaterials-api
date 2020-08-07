@@ -45,6 +45,21 @@ class ClassRating(models.Model):
   class_name = models.ForeignKey(Class, on_delete=models.CASCADE)
   rating = models.IntegerField(default=0)
 
+  # def __str__(self):
+  #   return ''
+
+
+class Resource(models.Model):
+  id = models.IntegerField(primary_key=True)
+
+  title = models.CharField(max_length=50)
+  description = models.CharField(max_length=255)
+  image_url = models.CharField(max_length=200)
+  link_url = models.CharField(max_length=200)
+  tag_list = models.CharField(max_length=100)
+
+  def __str__(self):
+    return self.title
 
 
 

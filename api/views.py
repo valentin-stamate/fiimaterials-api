@@ -6,8 +6,9 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 
-from .models import ClassRating, Class, Link
-from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer
+from .models import ClassRating, Class, Link, Resource
+from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
+  ResourceSerializer
 
 
 @api_view(http_method_names=['POST'])
@@ -31,8 +32,7 @@ def get_links(request):
 
   data = []
   for link in links:
-    link_serializer = LinkSerializer(link)
-    data.append(link_serializer.data)
+    data.append(LinkSerializer(link).data)
 
   return Response(data=data, status=status.HTTP_200_OK)
 
@@ -113,5 +113,14 @@ class SetRating(APIView):
     return Response(status=status.HTTP_200_OK)
 
 
-# TODO add __str__ to all models
+@api_view(http_method_names=['GET'])
+def get_resources(request):
+
+  res_list = []
+
+  for res in Resource.objects.all():
+    res_list.append(ResourceSerializer(res).data)
+
+  return Response(data=res_list, status=status.HTTP_200_OK)
+
 
