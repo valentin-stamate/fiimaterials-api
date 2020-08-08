@@ -1,79 +1,160 @@
 
 links = [
   {
+    "id": 0,
     "name": "Anunturi",
     "link": "https://www.info.uaic.ro",
-    "type": 1,
   },
   {
+    "id": 1,
     "name": "Admitere",
     "link": "https://www.info.uaic.ro/admitere-2020-studii-de-licenta",
-    "type": 1,
   },
   {
+    "id": 2,
     "name": "Sali Libere",
     "link": "https://profs.info.uaic.ro/~orar/globale/sali_libere.html",
-    "type": 1,
   },
   {
+    "id": 3,
     "name": "Cazare",
     "link": "http://www.uaic.ro/studenti/cazare/",
-    "type": 1,
   },
   {
+    "id": 4,
     "name": "Ghidul Studentului",
     "link": "http://www.uaic.ro/studenti/ghidul-studentului-uaic/",
-    "type": 1,
   },
   {
+    "id": 5,
     "name": "Burse",
     "link": "http://www.uaic.ro/studenti/burse",
-    "type": 1,
   },
   {
+    "id": 6,
     "name": "Structura Anului",
     "link": "https://www.info.uaic.ro/academicyear1819",
-    "type": 1,
   },
   {
+    "id": 7,
     "name": "Orar Studenti",
     "link": "https://profs.info.uaic.ro/~orar/orar_studenti.html",
-    "type": 1,
   },
   {
+    "id": 8,
     "name": "Orar Profesori",
     "link": "https://profs.info.uaic.ro/~orar/orar_profesori.html",
-    "type": 1,
   },
   {
+    "id": 9,
     "name": "Regulamente",
     "link": "https://www.info.uaic.ro/regulamente/",
-    "type": 1,
   },
   {
+    "id": 10,
     "name": "ESims",
     "link": "https://simsweb.uaic.ro/eSIMS/Default.aspx",
-    "type": 1,
   }
 ]
 
 resources = [
   {
     "id": 0,
-    "title": "Test One",
-    "description": "Lorem ipsum dolor sit amet",
-    "image_url": "https://img.youtube.com/vi/lPx0n6X0d8g/0.jpg",
-    "link_url": "https://www.youtube.com/watch?v=lPx0n6X0d8g",
-    "tag_list": "oop fun algorithms",
+    "title": "Operating System",
+    "description": "",
+    "image_url": "https://i.ytimg.com/vi/vBURTt97EkA/sddefault.jpg",
+    "link_url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O",
+    "tag_list": "os",
   },
   {
     "id": 1,
-    "title": "Test Two",
-    "description": "Lorem ipsum dolor sit amet",
-    "image_url": "https://img.youtube.com/vi/lPx0n6X0d8g/0.jpg",
-    "link_url": "https://www.youtube.com/watch?v=lPx0n6X0d8g",
-    "tag_list": "oop fun algorithms",
+    "title": "Linear Algebra",
+    "description": "",
+    "image_url": "https://i.ytimg.com/vi/kjBOesZCoqc/sddefault.jpg",
+    "link_url": "https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B",
+    "tag_list": "math",
   },
+  {
+    "id": 2,
+    "title": "Abdul Bari",
+    "description": "",
+    "image_url": "https://i.postimg.cc/ZqbSJWnc/image.jpg",
+    "link_url": "https://www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw",
+    "tag_list": "algorithm_design programming data_structures afcs",
+  },
+  {
+    "id": 3,
+    "title": "Tom Scott",
+    "description": "",
+    "image_url": "https://i.postimg.cc/R0gzhvnz/image.jpg",
+    "link_url": "https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A",
+    "tag_list": "programmer_tips fun",
+  },
+  {
+    "id": 4,
+    "title": "C++",
+    "description": "",
+    "image_url": "https://i.ytimg.com/vi/18c3MTX0PK0/sddefault.jpg",
+    "link_url": "https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb",
+    "tag_list": "oop",
+  },
+  {
+    "id": 5,
+    "title": "Tushar Roy - Coding Made Simple",
+    "description": "",
+    "image_url": "https://i.postimg.cc/wv3YsnhR/image.jpg",
+    "link_url": "https://www.youtube.com/channel/UCZLJf_R2sWyUtXSKiKlyvAw",
+    "tag_list": "data_structures",
+  },
+  {
+    "id": 6,
+    "title": "Google",
+    "description": "",
+    "image_url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "link_url": "https://www.google.com/",
+    "tag_list": "all",
+  },
+  {
+    "id": 7,
+    "title": "StackOverflow",
+    "description": "",
+    "image_url": "https://miro.medium.com/max/1200/0*UEtwA2ask7vQYW06.png",
+    "link_url": "https://stackoverflow.com/",
+    "tag_list": "programming",
+  },
+  {
+    "id": 8,
+    "title": "Medium",
+    "description": "",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Medium_logo_Wordmark_Black.svg",
+    "link_url": "https://medium.com/",
+    "tag_list": "article",
+  },
+  {
+    "id": 9,
+    "title": "Udemy",
+    "description": "",
+    "image_url": "https://www.udemy.com/staticx/udemy/images/v6/default-meta-image.png",
+    "link_url": "https://www.udemy.com/",
+    "tag_list": "course",
+  },
+  {
+    "id": 10,
+    "title": "Coding In Flow",
+    "description": "",
+    "image_url": "https://yt3.ggpht.com/a/AATXAJxBWgqGrP1UDlTUL4fF9dk2U_s0kfslRpC-TtJzJQ=s800-c-k-c0xffffffff-no-rj-mo",
+    "link_url": "https://www.youtube.com/channel/UC_Fh8kvtkVPkeihBs42jGcA",
+    "tag_list": "android"
+  },
+  # {
+  #   "id": 0,
+  #   "title": "Coding With Mitch",
+  #   "description": "",
+  #   "image_url": "",
+  #   "link_url": "",
+  #   "tag_list": ""
+  # },
+
 ]
 
 classes = [
@@ -84,10 +165,11 @@ classes = [
     "credits": 6,
     "material_link": "http://bit.ly/38xJkry",
     "site_link": "https://profs.info.uaic.ro/~sd",
-    "site_password": "sd20192020",
+    "site_password": "sd sd20192020",
     "year": 1,
     "semester": 1,
   },
+
   {
     "id": 1,
     "name": "Computer Architecture and Operating Systems",
@@ -95,8 +177,9 @@ classes = [
     "credits": 5,
     "material_link": "http://bit.ly/31PbY5b",
     "site_link": "https://profs.info.uaic.ro/~rvlad/stud.html",
+    "site_password": "",
     "year": 1,
-    "semester": 1
+    "semester": 1,
   },
   {
     "id": 2,
@@ -105,8 +188,9 @@ classes = [
     "credits": 6,
     "material_link": "http://bit.ly/2SnbW14",
     "site_link": "https://profs.info.uaic.ro/~rvlad/stud.html",
+    "site_password": "",
     "year": 1,
-    "semester": 1
+    "semester": 1,
   },
   {
     "id": 3,
@@ -115,6 +199,7 @@ classes = [
     "credits": 5,
     "material_link": "http://bit.ly/2UQg7Eq",
     "site_link": "https://profs.info.uaic.ro/~andreea.arusoaie/mate.html",
+    "site_password": "",
     "year": 1,
     "semester": 1,
   },
@@ -125,6 +210,7 @@ classes = [
     "credits": 4,
     "material_link": "http://bit.ly/31NKKvN",
     "site_link": "http://www.edusoft.ro/introp",
+    "site_password": "",
     "year": 1,
     "semester": 1
   },
@@ -133,7 +219,9 @@ classes = [
     "name": "English Language I",
     "name_short": "English",
     "credits": 4,
+    "material_link": "",
     "site_link": "https://profs.info.uaic.ro/~augusto.perez",
+    "site_password": "",
     "year": 1,
     "semester": 1
   },
@@ -142,7 +230,9 @@ classes = [
     "name": "Competitive Programming V",
     "name_short": "CP",
     "credits": 3,
+    "material_link": "",
     "site_link": "http://students.info.uaic.ro/~alexandru.ionita/pc/index.html",
+    "site_password": "",
     "year": 1,
     "semester": 1
   },
@@ -151,6 +241,9 @@ classes = [
     "name": "Physical Education I",
     "name_short": "FE",
     "credits": 1,
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 1,
     "semester": 1
   },
@@ -159,6 +252,9 @@ classes = [
     "name": "Educational Psychology",
     "name_short": "EP",
     "credits": 5,
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 1,
     "semester": 1
   },
@@ -170,6 +266,7 @@ classes = [
     "credits": 6,
     "material_link": "http://bit.ly/39Wbspf",
     "site_link": "https://sites.google.com/site/fiicoursepoo",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -191,6 +288,7 @@ classes = [
     "credits": 5,
     "material_link": "http://bit.ly/2TT0zyW",
     "site_link": "https://profs.info.uaic.ro/~fltiplea/AFCS/AFCS.html",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -201,6 +299,7 @@ classes = [
     "credits": 4,
     "material_link": "http://bit.ly/2ITqL6g",
     "site_link": "https://profs.info.uaic.ro/~adrian.zalinescu/PS.html",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -211,6 +310,7 @@ classes = [
     "credits": 5,
     "material_link": "http://bit.ly/2UafO5w",
     "site_link": "https://sites.google.com/site/fiicoursepa",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -219,7 +319,9 @@ classes = [
     "name": "English Language II",
     "name_short": "English",
     "credits": 4,
+    "material_link": "",
     "site_link": "https://profs.info.uaic.ro/~augusto.perez",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -228,7 +330,9 @@ classes = [
     "name": "Competitive Programming VI",
     "name_short": "CP",
     "credits": 3,
+    "material_link": "",
     "site_link": "http://students.info.uaic.ro/~alexandru.ionita/pc/index.html",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -237,6 +341,9 @@ classes = [
     "name": "Physical Education II",
     "name_short": "FE",
     "credits": 1,
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -245,6 +352,9 @@ classes = [
     "name": "Ethics and Academic Integrity",
     "name_short": "EP",
     "credits": 3,
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -253,6 +363,9 @@ classes = [
     "name": "Pedagogy I",
     "name_short": "EP",
     "credits": 5,
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 1,
     "semester": 2,
   },
@@ -263,7 +376,9 @@ classes = [
     "name": "Second Year Coming Soon",
     "name_short": "OS",
     "credits": 6,
-    "site_password": "so2020 1+2=3",
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 2,
     "semester": 1,
   },
@@ -273,32 +388,11 @@ classes = [
     "name": "Third Year Coming Soon",
     "name_short": "OS",
     "credits": 6,
-    "site_password": "so2020 1+2=3",
+    "material_link": "",
+    "site_link": "",
+    "site_password": "",
     "year": 3,
     "semester": 1,
   },
 ]
 
-# name = models.CharField(max_length=50, unique=True)
-# name_short = models.CharField(max_length=10)
-# average_rating = models.FloatField(default=0)
-# credits = models.IntegerField()
-# material_link = models.CharField(max_length=50, blank=True)
-# site_link = models.CharField(max_length=50, blank=True)
-# site_password = models.CharField(max_length=20, blank=True)
-#
-# year = models.IntegerField()
-# semester = models.IntegerField()
-#
-# votes_number = models.IntegerField(default=0)
-# updated_at = models.DateField(auto_now=True)
-
-# {
-#     "name": "Mathematics",
-#     "name_short": "Math",
-#     "credits": 5,
-#     "material_link": "http://bit.ly/2UQg7Eq",
-#     "site_link": "https://profs.info.uaic.ro/~andreea.arusoaie/mate.html",
-#     "year": 1,
-#     "semester": 1,
-#   },

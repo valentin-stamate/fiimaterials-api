@@ -21,8 +21,8 @@ class ClassAdmin(admin.ModelAdmin):
 
 
 class LinkAdmin(admin.ModelAdmin):
-  list_display = ['name', 'type']
-  search_fields = ['name', 'type']
+  list_display = ['id', 'name']
+  search_fields = ['name']
 
 
 class ClassRatingAdmin(admin.ModelAdmin):

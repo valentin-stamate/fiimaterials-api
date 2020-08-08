@@ -7,7 +7,7 @@ import re
 class LinkSerializer(serializers.ModelSerializer):
   class Meta:
     model = Link
-    fields = ['name', 'link', 'type']
+    fields = ['name', 'link']
 
 
 class ClassSerializer(serializers.ModelSerializer):

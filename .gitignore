@@ -4,3 +4,5 @@ build
 .idea
 server/secrets.py
 *__pycache__
+
+/api/migrations/
