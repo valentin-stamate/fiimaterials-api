@@ -61,7 +61,7 @@ resources = [
   {
     "id": 0,
     "title": "Google",
-    "description": "If you don't already know, in cs Google and Youtube will be you best friends. If you don't knwo something like the Secrets Of The Universe, just google it and you may find the answer.",
+    "description": "If you don't already know, in cs Google and Youtube will be you best friends. If you don't know something like the Secrets Of The Universe, just google it and you may find the answer.",
     "image_url": "https://i.postimg.cc/KvkbvKb7/Resources-Thumbnail-Skelet-01.png",
     "link_url": "https://www.google.com/",
     "tag_list": "all",
@@ -77,7 +77,7 @@ resources = [
   {
     "id": 2,
     "title": "Medium",
-    "description": "If you are a self learner, this site have very useful 'how to ...' articles. If you question is simple you better go to StackOveflow, but if you question is reffering to some process to make like \"how to use redux with react\", then you could check this site",
+    "description": "If you are a self learner, this site have very useful 'how to ...' articles. If your question is simple you better go to StackOveflow, but if you question is reffering to some process like \"how to use redux with react\", then you could check this site",
     "image_url": "https://i.postimg.cc/YqWcBJNb/mediumtext-01.png",
     "link_url": "https://medium.com/",
     "tag_list": "article",
@@ -93,7 +93,7 @@ resources = [
   {
     "id": 4,
     "title": "Linear Algebra",
-    "description": "I was surprised how amazing was this topic when I was saw it. Unfortunately it was too late for me.",
+    "description": "I was surprised how amazing was this topic was when I saw this playlist. Unfortunately it was too late for me.",
     "image_url": "https://i.ytimg.com/vi/kjBOesZCoqc/sddefault.jpg",
     "link_url": "https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B",
     "tag_list": "math",
@@ -109,7 +109,7 @@ resources = [
   {
     "id": 6,
     "title": "Tushar Roy - Coding Made Simple",
-    "description": "This guy helped me understand Red Black Trees. He has very good videos about trees.",
+    "description": "This guy helped me understand few data structures. He has very good videos about trees.",
     "image_url": "https://i.postimg.cc/wv3YsnhR/image.jpg",
     "link_url": "https://www.youtube.com/channel/UCZLJf_R2sWyUtXSKiKlyvAw",
     "tag_list": "data_structures",
@@ -117,7 +117,7 @@ resources = [
   {
     "id": 7,
     "title": "Operating System",
-    "description": "A nice playlist with os videos. I didn't used it but other students recommended it.",
+    "description": "A nice playlist with os videos. I didn't used it, but other students recommended it.",
     "image_url": "https://i.ytimg.com/vi/vBURTt97EkA/sddefault.jpg",
     "link_url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O",
     "tag_list": "os",
@@ -125,7 +125,7 @@ resources = [
   {
     "id": 8,
     "title": "Tom Scott",
-    "description": "In your free time you can check his videos, he has very interesting topics.",
+    "description": "In your free time you can check his videos, he has very interesting topics such as burnout as a programmer.",
     "image_url": "https://i.postimg.cc/R0gzhvnz/image.jpg",
     "link_url": "https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A",
     "tag_list": "programmer_tips fun",
@@ -141,13 +141,13 @@ resources = [
   {
     "id": 10,
     "title": "Coding In Flow",
-    "description": "If you are intresting on making Android apps, he makes very good Android tutorials. There is another guy, is like his evil twin brother: \"Coding with Mitch\"",
+    "description": "If you are intresting on making Android apps, he makes very good tutorials. There is another guy, is like his evil twin brother: \"Coding with Mitch\"",
     "image_url": "https://i.postimg.cc/CxGWzkQ8/codinginflow-01.jpg",
     "link_url": "https://www.youtube.com/channel/UC_Fh8kvtkVPkeihBs42jGcA",
     "tag_list": "android",
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "I am Programmer, I have no life.",
     "description": "Life is not being always serious... (I should tell this to myself in the mirror). Memes, programmers pain, all good stuff.",
     "image_url": "https://i.postimg.cc/Gp2tKLYX/programmernolife-01-01.jpg",
@@ -216,8 +216,8 @@ classes = [
     "name": " Introduction to Programming",
     "name_short": "IP",
     "credits": 4,
-    "material_link": "http://bit.ly/31NKKvN",
-    "site_link": "http://www.edusoft.ro/introp",
+    "material_link": "",
+    "site_link": "http://bit.ly/31NKKvN",
     "site_password": "",
     "year": 1,
     "semester": 1

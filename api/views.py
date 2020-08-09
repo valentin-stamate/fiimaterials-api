@@ -15,7 +15,7 @@ from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerialize
 def get_classes(request):
 
   year = request.data["year"]
-  classes = Class.objects.all().filter(year=year)
+  classes = Class.objects.all().filter(year=year).order_by('id')
 
   data = []
   for cls in classes:
@@ -28,7 +28,7 @@ def get_classes(request):
 @api_view(http_method_names=['GET'])
 def get_links(request):
 
-  links = Link.objects.all()
+  links = Link.objects.all().order_by('id')
 
   data = []
   for link in links:
@@ -96,18 +96,36 @@ class SetRating(APIView):
   def post(self, request):
 
     user = request.user
-    new_rating = request.data['rating']
+    rating_number = int(request.data['rating'])
 
-    if new_rating > 5 or new_rating < 1:
+    if rating_number > 5 or rating_number < 1:
       return Response(status=status.HTTP_400_BAD_REQUEST)
 
     class_instance = Class.objects.get(id=request.data['class_id'])
+
+    #
     class_rating, created = ClassRating.objects.get_or_create(
       student=user,
       class_name=class_instance,
     )
 
-    class_rating.rating = new_rating
+    votes_number = class_instance.votes_number
+    class_rating_number = class_instance.average_rating
+
+    if created:
+      total_raw_rating = votes_number * class_rating_number + rating_number
+      votes_number = votes_number + 1
+      class_rating_number = total_raw_rating / votes_number
+    else:
+      old_rating = class_rating.rating
+      total_raw_rating = votes_number * class_rating_number - old_rating + rating_number
+      class_rating_number = total_raw_rating / votes_number
+
+    class_instance.votes_number = votes_number
+    class_instance.average_rating = class_rating_number
+    class_instance.save()
+
+    class_rating.rating = rating_number
     class_rating.save()
 
     return Response(status=status.HTTP_200_OK)
@@ -118,7 +136,7 @@ def get_resources(request):
 
   res_list = []
 
-  for res in Resource.objects.all():
+  for res in Resource.objects.all().order_by('id'):
     res_list.append(ResourceSerializer(res).data)
 
   return Response(data=res_list, status=status.HTTP_200_OK)

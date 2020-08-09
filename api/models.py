@@ -41,14 +41,14 @@ class ClassRating(models.Model):
   rating = models.IntegerField(default=0)
 
   def __str__(self):
-    return self.rating
+    return str(self.rating)
 
 
 class Resource(models.Model):
   id = models.IntegerField(primary_key=True, unique=True)
 
   title = models.CharField(max_length=50)
-  description = models.CharField(max_length=255)
+  description = models.TextField(blank=True)
   image_url = models.CharField(max_length=200)
   link_url = models.CharField(max_length=200)
   tag_list = models.CharField(max_length=100)
