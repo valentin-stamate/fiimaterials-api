@@ -57,4 +57,17 @@ class Resource(models.Model):
     return self.title
 
 
+class Feedback(models.Model):
+  id = models.AutoField(primary_key=True)
+  student = models.ForeignKey(Student, on_delete=models.CASCADE)
+
+  name = models.CharField(max_length=30, blank=True)
+  show_name = models.BooleanField(default=True)
+  implemented = models.BooleanField(default=False)
+  feedback = models.CharField(max_length=255)
+
+  date_created = models.DateField(auto_created=True)
+
+  def __str__(self):
+    return self.name
 

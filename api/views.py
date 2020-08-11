@@ -6,9 +6,10 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 
-from .models import ClassRating, Class, Link, Resource
+from .models import ClassRating, Class, Link, Resource, Feedback
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
-  ResourceSerializer
+  ResourceSerializer, FeedbackSerializer
+from django.utils import timezone
 
 
 @api_view(http_method_names=['POST'])
@@ -142,3 +143,40 @@ def get_resources(request):
   return Response(data=res_list, status=status.HTTP_200_OK)
 
 
+def get_all_feedback():
+  feedback_list = Feedback.objects.all().order_by('id').reverse()
+
+  data = []
+  for feedback in feedback_list:
+    data.append({
+      'name': feedback.name if feedback.show_name and len(feedback.name) > 5 else 'Anonymous',
+      'date_created': feedback.date_created,
+      'implemented': feedback.implemented,
+      'feedback': feedback.feedback,
+    })
+
+  return data
+
+
+class PostFeedback(APIView):
+  authentication_classes = [TokenAuthentication]
+  permission_classes = [IsAuthenticated]
+
+  def post(self, request):
+
+    feedback = Feedback.objects.create(
+      student=request.user,
+      name=request.data['name'],
+      feedback=request.data['feedback'],
+      show_name=request.data['show_name'],
+      date_created=timezone.now(),
+    )
+    feedback.save()
+
+    return Response(data=get_all_feedback(), status=status.HTTP_200_OK)
+
+
+@api_view(http_method_names=['GET'])
+def get_feedback(request):
+
+  return Response(data=get_all_feedback(), status=status.HTTP_200_OK)

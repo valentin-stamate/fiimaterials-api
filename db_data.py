@@ -403,4 +403,3 @@ classes = [
     "semester": 1,
   },
 ]
-

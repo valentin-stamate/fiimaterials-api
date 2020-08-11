@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Link, Class, Student, Resource
+from api.models import Link, Class, Student, Resource, Feedback
 import re
 
 
@@ -81,4 +81,8 @@ class ResourceSerializer(serializers.ModelSerializer):
     fields = ['id', 'title', 'description', 'image_url', 'link_url', 'tag_list']
 
 
+class FeedbackSerializer(serializers.ModelSerializer):
 
+  class Meta:
+    model = Feedback
+    fields = ['id', 'student', 'name', 'show_name', 'implemented', 'feedback', 'date_created']
