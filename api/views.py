@@ -1,21 +1,20 @@
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
 
 from .models import ClassRating, Class, Link, Resource, Feedback
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
-  ResourceSerializer, FeedbackSerializer, ClassRatingSerializer
+  ResourceSerializer
 from django.utils import timezone
 
 
 def get_all_classes(year, user):
 
   classes = Class.objects.all().filter(year=year).order_by('id')
-  print(user.username)
 
   data = []
   for cls in classes:
@@ -36,6 +35,8 @@ def get_all_classes(year, user):
 
 
 @api_view(http_method_names=['POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([AllowAny])
 def get_classes(request):
 
   return Response(data=get_all_classes(request.data['year'], request.user), status=status.HTTP_200_OK)
