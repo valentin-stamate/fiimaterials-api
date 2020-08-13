@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Link, Class, Student, Resource, Feedback
+from api.models import Link, Class, Student, Resource, Feedback, ClassRating
 import re
 
 
@@ -86,3 +86,10 @@ class FeedbackSerializer(serializers.ModelSerializer):
   class Meta:
     model = Feedback
     fields = ['id', 'student', 'name', 'show_name', 'implemented', 'feedback', 'date_created']
+
+
+class ClassRatingSerializer(serializers.ModelSerializer):
+
+  class Meta:
+    model = ClassRating
+    fields = ['student', 'class_name', 'rating']

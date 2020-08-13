@@ -8,22 +8,37 @@ from rest_framework.authtoken.models import Token
 
 from .models import ClassRating, Class, Link, Resource, Feedback
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
-  ResourceSerializer, FeedbackSerializer
+  ResourceSerializer, FeedbackSerializer, ClassRatingSerializer
 from django.utils import timezone
+
+
+def get_all_classes(year, user):
+
+  classes = Class.objects.all().filter(year=year).order_by('id')
+  print(user.username)
+
+  data = []
+  for cls in classes:
+    class_rating = None
+    rating = 0.0
+
+    if user.is_authenticated:
+      class_rating = ClassRating.objects.all().filter(student=user, class_name=cls).first()
+
+    if class_rating:
+      rating = class_rating.rating
+
+    class_serializer = ClassSerializer(cls).data
+    class_serializer['user_rating'] = rating
+    data.append(class_serializer)
+
+  return data
 
 
 @api_view(http_method_names=['POST'])
 def get_classes(request):
 
-  year = request.data["year"]
-  classes = Class.objects.all().filter(year=year).order_by('id')
-
-  data = []
-  for cls in classes:
-    class_serializer = ClassSerializer(cls)
-    data.append(class_serializer.data)
-
-  return Response(data=data, status=status.HTTP_200_OK)
+  return Response(data=get_all_classes(request.data['year'], request.user), status=status.HTTP_200_OK)
 
 
 @api_view(http_method_names=['GET'])
@@ -129,7 +144,9 @@ class SetRating(APIView):
     class_rating.rating = rating_number
     class_rating.save()
 
-    return Response(status=status.HTTP_200_OK)
+    year = class_instance.year
+
+    return Response(data=get_all_classes(year, request.user), status=status.HTTP_200_OK)
 
 
 @api_view(http_method_names=['GET'])
