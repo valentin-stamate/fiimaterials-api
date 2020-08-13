@@ -15,6 +15,8 @@ import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from .secrets import SECRET_HIDDEN_KEY
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -22,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '93$_m*%vd_^h7@vovz12xc+g%m3+&!5*3y-v404)$#&l8%loo4'
+SECRET_KEY = SECRET_HIDDEN_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
