@@ -1,4 +1,5 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.core.mail import send_mail
 from django.db import models
 from django.conf import settings
 from django.db.models.signals import post_save
@@ -21,6 +22,7 @@ class StudentManager(BaseUserManager):
 
     user.set_password(password)
     user.save(using=self._db)
+
     return user
 
   def create_superuser(self, username, email, password):
@@ -34,18 +36,19 @@ class StudentManager(BaseUserManager):
     superuser.is_admin = True
     superuser.is_staff = True
     superuser.is_superuser = True
+    superuser.is_active = True
     superuser.save(using=self._db)
 
     return superuser
 
 
 class Student(AbstractBaseUser):
-  username = models.CharField(max_length=20, unique=True)
+  username = models.CharField(max_length=30, unique=True)
   email = models.EmailField(max_length=50, unique=True)
   date_joined = models.DateTimeField(verbose_name='date joined', auto_now=True)
   last_login = models.DateTimeField(verbose_name='last login', auto_now=True)
   is_admin = models.BooleanField(default=False)
-  is_active = models.BooleanField(default=True)
+  is_active = models.BooleanField(default=False)
   is_staff = models.BooleanField(default=False)
   is_superuser = models.BooleanField(default=False)
 

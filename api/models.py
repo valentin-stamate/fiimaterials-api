@@ -3,6 +3,14 @@ from django.db import models
 from .auth import Student
 
 
+class VerificationToken(models.Model):
+  student = models.ForeignKey(Student, on_delete=models.CASCADE)
+  token = models.CharField(max_length=20)
+
+  def __str__(self):
+    return self.token
+
+
 class Class(models.Model):
   id = models.IntegerField(primary_key=True, unique=True)
 

@@ -5,8 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
-
-from .models import ClassRating, Class, Link, Resource, Feedback
+from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
   ResourceSerializer
 from django.utils import timezone
@@ -68,13 +67,11 @@ def signup_user(request):
 
   signup_serializer = SignupStudentSerializer(data=request.data)
   if signup_serializer.is_valid():
-    student = signup_serializer.save()
+    signup_serializer.save()
   else:
-    return Response(status=status.HTTP_206_PARTIAL_CONTENT)
+    return Response(status=status.HTTP_400_BAD_REQUEST)
 
-  token = Token.objects.get(user=student).key
-
-  return Response(data={'token': token}, status=status.HTTP_201_CREATED)
+  return Response(status=status.HTTP_201_CREATED)
 
 
 @api_view(http_method_names=['POST'])
@@ -90,6 +87,20 @@ def login_user(request):
   token = Token.objects.get(user=student).key
 
   return Response(data={'token': token}, status=status.HTTP_200_OK)
+
+
+@api_view(http_method_names=['POST'])
+def verify_email(request):
+
+  token = request.data['token']
+  verification_token = VerificationToken.objects.get(token=token)
+  user = verification_token.student
+  user.is_active = True
+  user.save()
+
+  verification_token.delete()
+
+  return Response(status=status.HTTP_200_OK)
 
 
 class GetUser(APIView):

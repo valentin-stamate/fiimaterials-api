@@ -1,7 +1,29 @@
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from rest_framework import serializers
 
 from api.models import Link, Class, Student, Resource, Feedback, ClassRating
 import re
+import string
+import random
+
+
+def random_token(length):
+  letters = string.ascii_lowercase
+  result_str = ''.join(random.choice(letters) for i in range(length))
+  return result_str
+
+
+def sendemail(subject, template, context, email_to):
+
+  html_message = render_to_string(template, context)
+  plain_message = strip_tags(html_message)
+
+  email_from = 'stamatevalentin64@gmail.com'
+
+  send_mail(subject=subject, message=plain_message, from_email=email_from,
+            recipient_list=email_to, html_message=html_message, fail_silently=False)
 
 
 class LinkSerializer(serializers.ModelSerializer):
@@ -42,6 +64,18 @@ class SignupStudentSerializer(serializers.ModelSerializer):
     student.set_password(password)
     student.save()
 
+    verification_token = random_token(16)
+
+    from api.models import VerificationToken
+    VerificationToken(student=student, token=verification_token).save()
+
+    email_context = {
+      'token': verification_token,
+      'username': student.username,
+    }
+
+    sendemail('Account Verification FIIMaterials', 'email_verification.html', email_context, [student.email])
+
     return student
 
 
@@ -67,6 +101,9 @@ class LoginStudentSerializer(serializers.Serializer):
 
     if not student.check_password(password):
       raise serializers.ValidationError("The password is wrong")
+
+    if not student.is_active:
+      raise serializers.ValidationError("Account is not activated")
 
     return student
 

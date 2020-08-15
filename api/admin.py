@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .auth import Student
-from .models import Class, Link, ClassRating, Resource, Feedback
+from .models import Class, Link, ClassRating, Resource, Feedback, VerificationToken
 
 
 class StudentAdmin(UserAdmin):
@@ -39,9 +39,14 @@ class FeedbackAdmin(admin.ModelAdmin):
   list_display = ['id', 'student', 'name', 'feedback']
 
 
+class VerificationTokenAdmin(admin.ModelAdmin):
+  list_display = ['student', 'token']
+
+
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Class, ClassAdmin)
 admin.site.register(Link, LinkAdmin)
 admin.site.register(ClassRating, ClassRatingAdmin)
 admin.site.register(Resource, ResourceAdmin)
 admin.site.register(Feedback, FeedbackAdmin)
+admin.site.register(VerificationToken, VerificationTokenAdmin)

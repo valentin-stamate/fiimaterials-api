@@ -15,7 +15,7 @@ import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-from .secrets import SECRET_HIDDEN_KEY
+from .secrets import SECRET_HIDDEN_KEY, EMAIL_HOST_PASSWORD_SECRET, EMAIL_HOST_USER_SECRET
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -68,6 +68,13 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 AUTH_USER_MODEL = 'api.Student'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST_USER = EMAIL_HOST_USER_SECRET
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD_SECRET
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
