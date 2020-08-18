@@ -1,57 +1,57 @@
 
 links = [
   {
-    "id": 0,
+    "id": 1,
     "name": "Anunturi",
     "link": "https://www.info.uaic.ro",
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Admitere",
     "link": "https://www.info.uaic.ro/admitere-2020-studii-de-licenta",
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Sali Libere",
     "link": "https://profs.info.uaic.ro/~orar/globale/sali_libere.html",
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Cazare",
     "link": "http://www.uaic.ro/studenti/cazare/",
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Ghidul Studentului",
     "link": "http://www.uaic.ro/studenti/ghidul-studentului-uaic/",
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Burse",
     "link": "http://www.uaic.ro/studenti/burse",
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Structura Anului",
     "link": "https://www.info.uaic.ro/academicyear1819",
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Orar Studenti",
     "link": "https://profs.info.uaic.ro/~orar/orar_studenti.html",
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Orar Profesori",
     "link": "https://profs.info.uaic.ro/~orar/orar_profesori.html",
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Regulamente",
     "link": "https://www.info.uaic.ro/regulamente/",
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "ESims",
     "link": "https://simsweb.uaic.ro/eSIMS/Default.aspx",
   }
@@ -59,7 +59,7 @@ links = [
 
 resources = [
   {
-    "id": 0,
+    "id": 1,
     "title": "Google",
     "description": "If you don't already know, in cs Google and Youtube will be you best friends. If you don't know something like the Secrets Of The Universe, just google it and you may find the answer.",
     "image_url": "https://i.postimg.cc/KvkbvKb7/Resources-Thumbnail-Skelet-01.png",
@@ -67,7 +67,7 @@ resources = [
     "tag_list": "all",
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "StackOverflow",
     "description": "This is gonna be your best friend when you have programming questions.",
     "image_url": "https://i.postimg.cc/tgyG52xD/stackoverflow.png",
@@ -75,7 +75,7 @@ resources = [
     "tag_list": "programming",
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Medium",
     "description": "If you are a self learner, this site have very useful 'how to ...' articles. If your question is simple you better go to StackOveflow, but if you question is reffering to some process like \"how to use redux with react\", then you could check this site",
     "image_url": "https://i.postimg.cc/YqWcBJNb/mediumtext-01.png",
@@ -83,7 +83,7 @@ resources = [
     "tag_list": "article",
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Udemy",
     "description": "Again, if you are a self learner and if you want to learn more things such as FullStack Web Development, Android, cooking? this is the perfect place to search for courses. Of course they are paid, but we are romanians and we know how to deals with the paid stuff.",
     "image_url": "https://www.udemy.com/staticx/udemy/images/v6/default-meta-image.png",
@@ -91,7 +91,7 @@ resources = [
     "tag_list": "course",
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Linear Algebra",
     "description": "I was surprised how amazing was this topic was when I saw this playlist. Unfortunately it was too late for me.",
     "image_url": "https://i.ytimg.com/vi/kjBOesZCoqc/sddefault.jpg",
@@ -99,7 +99,7 @@ resources = [
     "tag_list": "math",
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Abdul Bari",
     "description": "The \"Algorithms\" playlist can help you learn Data Structures. He has more topics, check the tags below.",
     "image_url": "https://i.postimg.cc/ZqbSJWnc/image.jpg",
@@ -107,7 +107,7 @@ resources = [
     "tag_list": "algorithm_design programming data_structures afcs",
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Tushar Roy - Coding Made Simple",
     "description": "This guy helped me understand few data structures. He has very good videos about trees.",
     "image_url": "https://i.postimg.cc/wv3YsnhR/image.jpg",
@@ -115,7 +115,7 @@ resources = [
     "tag_list": "data_structures",
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Operating System",
     "description": "A nice playlist with os videos. I didn't used it, but other students recommended it.",
     "image_url": "https://i.ytimg.com/vi/vBURTt97EkA/sddefault.jpg",
@@ -123,7 +123,7 @@ resources = [
     "tag_list": "os",
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Tom Scott",
     "description": "In your free time you can check his videos, he has very interesting topics such as burnout as a programmer.",
     "image_url": "https://i.postimg.cc/R0gzhvnz/image.jpg",
@@ -131,7 +131,7 @@ resources = [
     "tag_list": "programmer_tips fun",
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "C++",
     "description": "(< ++",
     "image_url": "https://i.ytimg.com/vi/18c3MTX0PK0/sddefault.jpg",
@@ -139,7 +139,7 @@ resources = [
     "tag_list": "oop",
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Coding In Flow",
     "description": "If you are intresting on making Android apps, he makes very good tutorials. There is another guy, is like his evil twin brother: \"Coding with Mitch\"",
     "image_url": "https://i.postimg.cc/CxGWzkQ8/codinginflow-01.jpg",
@@ -147,7 +147,7 @@ resources = [
     "tag_list": "android",
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "I am Programmer, I have no life.",
     "description": "Life is not being always serious... (I should tell this to myself in the mirror). Memes, programmers pain, all good stuff.",
     "image_url": "https://i.postimg.cc/Gp2tKLYX/programmernolife-01-01.jpg",
@@ -167,7 +167,7 @@ resources = [
 
 classes = [
   {
-    "id": 0,
+    "id": 1,
     "name": "Data Structures",
     "name_short": "DS",
     "credits": 6,
@@ -179,7 +179,7 @@ classes = [
   },
 
   {
-    "id": 1,
+    "id": 2,
     "name": "Computer Architecture and Operating Systems",
     "name_short": "CAOS",
     "credits": 5,
@@ -190,7 +190,7 @@ classes = [
     "semester": 1,
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Logics for Computer Science",
     "name_short": "Logics",
     "credits": 6,
@@ -201,7 +201,7 @@ classes = [
     "semester": 1,
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Mathematics",
     "name_short": "Math",
     "credits": 5,
@@ -212,7 +212,7 @@ classes = [
     "semester": 1,
   },
   {
-    "id": 4,
+    "id": 5,
     "name": " Introduction to Programming",
     "name_short": "IP",
     "credits": 4,
@@ -223,7 +223,7 @@ classes = [
     "semester": 1
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "English Language I",
     "name_short": "English",
     "credits": 4,
@@ -234,7 +234,7 @@ classes = [
     "semester": 1
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Competitive Programming V",
     "name_short": "CP",
     "credits": 3,
@@ -245,7 +245,7 @@ classes = [
     "semester": 1
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Physical Education I",
     "name_short": "FE",
     "credits": 1,
@@ -256,7 +256,7 @@ classes = [
     "semester": 1
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Educational Psychology",
     "name_short": "EP",
     "credits": 5,
@@ -268,7 +268,7 @@ classes = [
   },
 
   {
-    "id": 9,
+    "id": 10,
     "name": "Object Oriented Programming",
     "name_short": "OOP",
     "credits": 6,
@@ -279,7 +279,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Operating Systems",
     "name_short": "OS",
     "credits": 6,
@@ -290,7 +290,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Algebraic Foundations of Computer Science",
     "name_short": "AFCS",
     "credits": 5,
@@ -301,7 +301,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Probabilities and Statistics",
     "name_short": "PS",
     "credits": 4,
@@ -312,7 +312,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Algorithms Design",
     "name_short": "AD",
     "credits": 5,
@@ -323,7 +323,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "English Language II",
     "name_short": "English",
     "credits": 4,
@@ -334,7 +334,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Competitive Programming VI",
     "name_short": "CP",
     "credits": 3,
@@ -345,7 +345,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Physical Education II",
     "name_short": "FE",
     "credits": 1,
@@ -356,7 +356,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "Ethics and Academic Integrity",
     "name_short": "EP",
     "credits": 3,
@@ -367,7 +367,7 @@ classes = [
     "semester": 2,
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "Pedagogy I",
     "name_short": "EP",
     "credits": 5,
@@ -380,7 +380,7 @@ classes = [
 
 
   {
-    "id": 19,
+    "id": 20,
     "name": "Second Year Coming Soon",
     "name_short": "OS",
     "credits": 6,
@@ -392,7 +392,7 @@ classes = [
   },
 
   {
-    "id": 20,
+    "id": 21,
     "name": "Third Year Coming Soon",
     "name_short": "OS",
     "credits": 6,

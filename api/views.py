@@ -219,3 +219,33 @@ class PostFeedback(APIView):
 def get_feedback(request):
 
   return Response(data=get_all_feedback(), status=status.HTTP_200_OK)
+
+
+@api_view(http_method_names=['POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def delete_rating(request):
+  user = request.user
+  class_id = request.data['class_id']
+
+  class_ = Class.objects.get(id=class_id)
+  class_year = class_.year
+  class_rating = ClassRating.objects.get(student=user, class_name=class_)
+
+  rating = class_rating.rating
+  class_rating.delete()
+
+  average_rating = class_.average_rating
+  votes_number = class_.votes_number
+  total_sum = average_rating * votes_number
+
+  total_sum = total_sum - rating
+  votes_number = votes_number - 1
+
+  class_.votes_number = votes_number
+  class_.average_rating = total_sum / votes_number if votes_number != 0 else 0
+
+  class_.save()
+
+  return Response(data=get_all_classes(class_year, user), status=status.HTTP_200_OK)
+

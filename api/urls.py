@@ -1,7 +1,8 @@
 from django.urls import path
 
-from api.views import get_classes, get_links, signup_user, login_user, GetUserData, SetRating, get_resources, get_feedback, \
-  PostFeedback, verify_email
+from api.views import get_classes, get_links, signup_user, login_user, GetUserData, SetRating, get_resources, \
+  get_feedback, \
+  PostFeedback, verify_email, delete_rating
 
 urlpatterns = [
   path('get/classes/', get_classes),
@@ -13,5 +14,6 @@ urlpatterns = [
   path('get/resources/', get_resources),
   path('get/feedback/', get_feedback),
   path('post/feedback/', PostFeedback.as_view()),
-  path('verify-email/', verify_email)
+  path('verify-email/', verify_email),
+  path('delete-rating/', delete_rating),
 ]
