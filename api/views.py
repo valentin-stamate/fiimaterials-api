@@ -103,15 +103,25 @@ def verify_email(request):
   return Response(status=status.HTTP_200_OK)
 
 
-class GetUser(APIView):
+class GetUserData(APIView):
   authentication_classes = [TokenAuthentication]
   permission_classes = [IsAuthenticated]
 
   def post(self, request):
 
+    user = request.user
+
+    favorite_courses = []
+    for class_rating in ClassRating.objects.filter(student=user, rating=5):
+      favorite_courses.append(class_rating.class_name.name)
+
     data = {
-      'username': request.user.username,
-      'email': request.user.email,
+      'username': user.username,
+      'email': user.email,
+      'date_joined': user.date_joined.date(),
+      'last_login': user.last_login.date(),
+      'is_superuser': user.is_superuser,
+      'favorite_courses': favorite_courses,
     }
 
     return Response(data=data, status=status.HTTP_200_OK)
