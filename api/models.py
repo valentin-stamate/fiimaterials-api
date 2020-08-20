@@ -1,10 +1,20 @@
 from django.db import models
-
 from .auth import Student
 
 
 class VerificationToken(models.Model):
   student = models.ForeignKey(Student, on_delete=models.CASCADE)
+
+  CHOICES = [
+    (1, 'Account Verification'),
+    (2, 'New Email'),
+    (3, 'Recover Password'),
+  ]
+  type = models.IntegerField(choices=CHOICES)
+
+  new_email = models.EmailField(max_length=50, blank=True)
+  new_password = models.CharField(max_length=255, blank=True)
+
   token = models.CharField(max_length=20)
 
   def __str__(self):

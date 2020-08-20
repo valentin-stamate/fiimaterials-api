@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from rest_framework import status
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.response import Response
@@ -5,10 +6,90 @@ from rest_framework.views import APIView
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
+
 from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
   ResourceSerializer
 from django.utils import timezone
+from .utils import decrypt, sendemail, random_token, validate_email
+
+
+@api_view(http_method_names=['POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def update_profile(request):
+  user = request.user
+
+  new_username = request.data['username']
+  new_email = request.data['email']
+  new_password = request.data['new_password']
+  current_password = request.data['password']
+
+  if not user.check_password(current_password):
+    return Response(data='Wrong password', status=status.HTTP_400_BAD_REQUEST)
+
+  if len(new_username) < 8:
+    return Response(data='Your new password should be at least 8 characters', status=status.HTTP_400_BAD_REQUEST)
+
+  if new_email != '' and not validate_email(new_email):
+    return Response(data='Invalid email', status=status.HTTP_400_BAD_REQUEST)
+
+  if len(new_password) != 0 and len(new_password) < 8:
+    return Response(data='Invalid password', status=status.HTTP_400_BAD_REQUEST)
+
+  if user.username != new_username:
+    user.username = new_username
+
+  if new_email != '' and user.email != new_email:
+    token = random_token(16)
+    email_context = {
+      'token': token,
+      'username': user.username,
+    }
+
+    verification_token, created = VerificationToken.objects.get_or_create(student=user, type=2)
+    verification_token.new_email = new_email
+    verification_token.token = token
+    verification_token.save()
+
+    sendemail(subject='New Email', template='change_email.html', context=email_context,
+              email_to=[new_email])
+
+  if len(new_password) != 0:
+    user.set_password(new_password)
+
+  user.save()
+
+  logout(request)
+
+  return Response(data="Profile Updated", status=200)
+
+
+@api_view(http_method_names=['POST'])
+def verify_token(request):
+  token = request.data['token']
+  verification_token = VerificationToken.objects.get(token=token)
+  user = verification_token.student
+
+  message = ''
+  if verification_token.type == 1:
+    user.is_active = True
+    message = 'Account activated'
+
+  if verification_token.type == 2:
+    new_email = verification_token.new_email
+    user.email = new_email
+    message = 'Email updated'
+
+  if verification_token.type == 3:
+    new_encoded_password = verification_token.new_password
+    user.set_password(decrypt(new_encoded_password))
+    message = 'Password changed'
+
+  user.save()
+  verification_token.delete()
+
+  return Response(data=message, status=status.HTTP_200_OK)
 
 
 def get_all_classes(year, user):
@@ -87,20 +168,6 @@ def login_user(request):
   token = Token.objects.get(user=student).key
 
   return Response(data={'token': token}, status=status.HTTP_200_OK)
-
-
-@api_view(http_method_names=['POST'])
-def verify_email(request):
-
-  token = request.data['token']
-  verification_token = VerificationToken.objects.get(token=token)
-  user = verification_token.student
-  user.is_active = True
-  user.save()
-
-  verification_token.delete()
-
-  return Response(status=status.HTTP_200_OK)
 
 
 class GetUserData(APIView):
@@ -248,4 +315,5 @@ def delete_rating(request):
   class_.save()
 
   return Response(data=get_all_classes(class_year, user), status=status.HTTP_200_OK)
+
 
