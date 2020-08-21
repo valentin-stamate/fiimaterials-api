@@ -13,7 +13,6 @@ class VerificationToken(models.Model):
   type = models.IntegerField(choices=CHOICES)
 
   new_email = models.EmailField(max_length=50, blank=True)
-  new_password = models.CharField(max_length=255, blank=True)
 
   token = models.CharField(max_length=20)
 

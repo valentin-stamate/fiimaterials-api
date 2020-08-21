@@ -7,11 +7,39 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
 
+from .auth import Student
 from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
   ResourceSerializer
 from django.utils import timezone
 from .utils import decrypt, sendemail, random_token, validate_email
+
+
+@api_view(http_method_names=['POST'])
+def recover_password(request):
+  email = request.data['email']
+
+  if not validate_email(email):
+    return Response(status=status.HTTP_400_BAD_REQUEST)
+
+  user = Student.objects.get(email=email) # if the user is not found, then it will trow an error
+  username = user.username
+
+  token = random_token(16)
+
+  context = {
+    'username': username,
+    'token': token,
+  }
+
+  # I should DRY my hands here
+  verification_token, created = VerificationToken.objects.get_or_create(student=user, type=3)
+  verification_token.token = token
+  verification_token.save()
+
+  sendemail(subject='Recover Password', template='recover_password.html',context=context, email_to=[email])
+
+  return Response(status=status.HTTP_200_OK)
 
 
 @api_view(http_method_names=['POST'])
@@ -82,8 +110,8 @@ def verify_token(request):
     message = 'Email updated'
 
   if verification_token.type == 3:
-    new_encoded_password = verification_token.new_password
-    user.set_password(decrypt(new_encoded_password))
+    new_password = request.data['password']
+    user.set_password(new_password)
     message = 'Password changed'
 
   user.save()
