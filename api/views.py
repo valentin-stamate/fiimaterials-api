@@ -8,11 +8,22 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
 
 from .auth import Student
-from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken
+from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken, About
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
-  ResourceSerializer
+  ResourceSerializer, AboutSerializer
 from django.utils import timezone
 from .utils import decrypt, sendemail, random_token, validate_email
+
+
+@api_view(http_method_names=['GET'])
+def get_about(request):
+
+  data = []
+
+  for about in About.objects.all().order_by('id'):
+    data.append(AboutSerializer(about).data)
+
+  return Response(data=data, status=status.HTTP_200_OK)
 
 
 @api_view(http_method_names=['POST'])

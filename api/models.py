@@ -2,6 +2,16 @@ from django.db import models
 from .auth import Student
 
 
+class About(models.Model):
+  id = models.IntegerField(primary_key=True, unique=True)
+
+  title = models.CharField(max_length=100)
+  body = models.TextField()
+
+  def __str__(self):
+    return self.title
+
+
 class VerificationToken(models.Model):
   student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
