@@ -1,6 +1,6 @@
 from django.urls import path
 from api.views import get_classes, get_links, signup_user, login_user, GetUserData, SetRating, get_resources, \
-  get_feedback, PostFeedback, verify_token, delete_rating, update_profile, recover_password, get_about
+  get_feedback, PostFeedback, verify_token, delete_rating, update_profile, recover_password, get_about, get_credits
 
 urlpatterns = [
   path('get/classes/', get_classes),
@@ -17,4 +17,5 @@ urlpatterns = [
   path('update-profile/', update_profile),
   path('recover-password/', recover_password),
   path('get/about/', get_about),
+  path('get/credits/', get_credits),
 ]

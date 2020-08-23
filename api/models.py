@@ -2,6 +2,19 @@ from django.db import models
 from .auth import Student
 
 
+class Credits(models.Model):
+  id = models.IntegerField(primary_key=True, unique=True)
+
+  name = models.CharField(max_length=30)
+  about = models.CharField(max_length=255)
+  link = models.CharField(max_length=255)
+  role = models.CharField(max_length=100)
+  image_link = models.CharField(max_length=255)
+
+  def __str__(self):
+    return self.name
+
+
 class About(models.Model):
   id = models.IntegerField(primary_key=True, unique=True)
 

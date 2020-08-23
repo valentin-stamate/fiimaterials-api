@@ -1,7 +1,13 @@
 from rest_framework import serializers
-from api.models import Link, Class, Student, Resource, Feedback, ClassRating, About
+from api.models import Link, Class, Student, Resource, Feedback, ClassRating, About, Credits
 import re
 from api.utils import random_token, sendemail
+
+
+class CreditsSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Credits
+    fields = ['id', 'name', 'about', 'link', 'role', 'image_link']
 
 
 class AboutSerializer(serializers.ModelSerializer):

@@ -8,11 +8,22 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
 
 from .auth import Student
-from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken, About
+from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken, About, Credits
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
-  ResourceSerializer, AboutSerializer
+  ResourceSerializer, AboutSerializer, CreditsSerializer
 from django.utils import timezone
 from .utils import decrypt, sendemail, random_token, validate_email
+
+
+@api_view(http_method_names=['GET'])
+def get_credits(request):
+
+  data = []
+
+  for credit in Credits.objects.all().order_by('id'):
+    data.append(CreditsSerializer(credit).data)
+
+  return Response(data=data, status=status.HTTP_200_OK)
 
 
 @api_view(http_method_names=['GET'])
