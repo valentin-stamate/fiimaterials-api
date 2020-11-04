@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Link, Class, Student, Resource, Feedback, ClassRating, About, Credits
+from api.models import Link, Class, Student, Resource, Feedback, ClassRating, About, Credits, Asset
 import re
 from api.utils import random_token, sendemail
 
@@ -25,8 +25,14 @@ class LinkSerializer(serializers.ModelSerializer):
 class ClassSerializer(serializers.ModelSerializer):
   class Meta:
     model = Class
-    fields = ['id', 'name', 'name_short', 'average_rating', 'credits', 'year', 'semester',
+    fields = ['id', 'name', 'name_short', 'average_rating', 'credits', 'year', 'semester', 'about',
               'material_link', 'site_link', 'site_password', 'votes_number']
+
+
+class AssetSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Asset
+    fields = ['id', 'name', 'content']
 
 
 class SignupStudentSerializer(serializers.ModelSerializer):

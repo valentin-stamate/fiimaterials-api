@@ -8,9 +8,9 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
 
 from .auth import Student
-from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken, About, Credits
+from .models import ClassRating, Class, Link, Resource, Feedback, VerificationToken, About, Credits, Asset
 from .serializers import ClassSerializer, LinkSerializer, SignupStudentSerializer, LoginStudentSerializer, \
-  ResourceSerializer, AboutSerializer, CreditsSerializer
+  ResourceSerializer, AboutSerializer, CreditsSerializer, AssetSerializer
 from django.utils import timezone
 from .utils import decrypt, sendemail, random_token, validate_email
 
@@ -336,6 +336,15 @@ class PostFeedback(APIView):
 def get_feedback(request):
 
   return Response(data=get_all_feedback(), status=status.HTTP_200_OK)
+
+
+@api_view(http_method_names=['GET'])
+def get_diagram(request):
+
+  make_sense = Asset.objects.all().get(name='make_sense')
+  make_sense_serializer = AssetSerializer(make_sense).data
+
+  return Response(data=make_sense_serializer, status=status.HTTP_200_OK)
 
 
 @api_view(http_method_names=['POST'])

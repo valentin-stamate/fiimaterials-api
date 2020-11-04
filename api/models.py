@@ -2,6 +2,13 @@ from django.db import models
 from .auth import Student
 
 
+class Asset(models.Model):
+  id = models.IntegerField(primary_key=True, unique=True)
+
+  name = models.CharField(max_length=100)
+  content = models.TextField()
+
+
 class Credits(models.Model):
   id = models.IntegerField(primary_key=True, unique=True)
 
@@ -55,6 +62,8 @@ class Class(models.Model):
 
   year = models.IntegerField(blank=True, null=True)
   semester = models.IntegerField(blank=True, null=True)
+
+  about = models.TextField(default='Coming soon.')
 
   votes_number = models.IntegerField(default=0)
   average_rating = models.FloatField(default=0)
