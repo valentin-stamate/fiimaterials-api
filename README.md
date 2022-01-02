@@ -1,4 +1,9 @@
-# FIIMaterials Backend
+# FIIMaterials-Backend
 
-## Authentication
-The authentication method is token authentication. There are more methods: session, jwt but I choose token authentication because it was simple to implement and it seemed pretty secure.
+## Tech Stack:
+* Node.js
+* Typescript
+* GraphQL
+
+Resources:
+* Create an Express Typescript App : https://blog.logrocket.com/typescript-with-node-js-and-express/
