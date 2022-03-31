@@ -1,5 +1,6 @@
 export enum ResponseMessage {
-    
+    INCOMPLETE_FORM = 'Incomplete form',
+    ADMIN_ACCESS_ONLY = 'Admin access only',
 }
 
 /** Contains the request responses */
