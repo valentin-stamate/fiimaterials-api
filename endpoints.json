@@ -39,7 +39,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Users/Valentin/Desktop/materials.json"
+							"src": "/C:/Users/Valentin/Desktop/FIIMaterials/FIIMaterials-Backend/materials/materials.json"
 						}
 					]
 				},
@@ -50,6 +50,55 @@
 					],
 					"path": [
 						"refresh-materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/feedback",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "fsdfdsf",
+							"type": "text"
+						},
+						{
+							"key": "feedback",
+							"value": "Ana a remere",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/feedback",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"feedback"
 					]
 				}
 			},
