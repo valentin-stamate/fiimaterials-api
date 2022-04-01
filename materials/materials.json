@@ -10,7 +10,7 @@
     "year": 1,
     "semester": 1,
     "type": 0,
-    "updated": "2021-02-22T22:00:00.000Z"
+    "updatedAt": "2021-02-22T22:00:00.000Z"
   },
   {
     "name": "Computer Architecture and Operating Systems",
@@ -23,7 +23,7 @@
     "year": 1,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Logics for Computer Science",
@@ -36,7 +36,7 @@
     "year": 1,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Mathematics",
@@ -49,7 +49,7 @@
     "year": 1,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Introduction to Programming",
@@ -62,7 +62,7 @@
     "year": 1,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "English Language I",
@@ -75,7 +75,7 @@
     "year": 1,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Competitive Programming",
@@ -88,7 +88,7 @@
     "year": 1,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Physical Education",
@@ -101,7 +101,7 @@
     "year": 1,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Object Oriented Programming",
@@ -114,7 +114,7 @@
     "year": 1,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Operating Systems",
@@ -127,7 +127,7 @@
     "year": 1,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Algebraic Foundations of Computer Science",
@@ -140,7 +140,7 @@
     "year": 1,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Probabilities and Statistics",
@@ -153,7 +153,7 @@
     "year": 1,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Algorithms Design",
@@ -166,7 +166,7 @@
     "year": 1,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "English Language II",
@@ -179,7 +179,7 @@
     "year": 1,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Competitive Programming",
@@ -192,7 +192,7 @@
     "year": 1,
     "semester": 2,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Physical Education II",
@@ -205,7 +205,7 @@
     "year": 1,
     "semester": 2,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Ethics and Academic Integrity",
@@ -218,7 +218,7 @@
     "year": 1,
     "semester": 2,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Computer Networks",
@@ -231,7 +231,7 @@
     "year": 2,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Databases",
@@ -244,7 +244,7 @@
     "year": 2,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Formal Languages, Automata and Compilers",
@@ -257,7 +257,7 @@
     "year": 2,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Graph Algorithms",
@@ -270,7 +270,7 @@
     "year": 2,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "English Language III",
@@ -283,7 +283,7 @@
     "year": 2,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Computability, Decidability and Complexity",
@@ -296,7 +296,7 @@
     "year": 2,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Principles of Programming Languages",
@@ -309,7 +309,7 @@
     "year": 2,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Genetic Algorithms",
@@ -322,7 +322,7 @@
     "year": 2,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Quantum Computing",
@@ -335,7 +335,7 @@
     "year": 2,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Competitive Programming",
@@ -348,7 +348,7 @@
     "year": 2,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Physical Education",
@@ -361,7 +361,7 @@
     "year": 2,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Industry Training I",
@@ -374,7 +374,7 @@
     "year": 2,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "WEB Technologies",
@@ -387,7 +387,7 @@
     "year": 2,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Advanced Programming",
@@ -400,7 +400,7 @@
     "year": 2,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Software Engineering",
@@ -413,7 +413,7 @@
     "year": 2,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "DBMS Practice",
@@ -426,7 +426,7 @@
     "year": 2,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "English Language IV",
@@ -439,7 +439,7 @@
     "year": 2,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Functional Programming",
@@ -452,7 +452,7 @@
     "year": 2,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Introduction to Cryptography",
@@ -465,7 +465,7 @@
     "year": 2,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Entrepreneurship and Innovation in IT",
@@ -478,7 +478,7 @@
     "year": 2,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Embedded Systems",
@@ -491,7 +491,7 @@
     "year": 2,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Competitive Programming",
@@ -504,7 +504,7 @@
     "year": 2,
     "semester": 2,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Physical Education",
@@ -517,7 +517,7 @@
     "year": 2,
     "semester": 2,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Machine Learning",
@@ -530,7 +530,7 @@
     "year": 3,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Information Security",
@@ -543,7 +543,7 @@
     "year": 3,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Artificial Intelligence",
@@ -556,7 +556,7 @@
     "year": 3,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Python Programming",
@@ -569,7 +569,7 @@
     "year": 3,
     "semester": 1,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Introduction to .NET",
@@ -582,7 +582,7 @@
     "year": 3,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Physical Systems Development Using Microprocessors",
@@ -595,7 +595,7 @@
     "year": 3,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Neural Networks",
@@ -608,7 +608,7 @@
     "year": 3,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "3D Computer Animation",
@@ -621,7 +621,7 @@
     "year": 3,
     "semester": 1,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Probabilistic Programming and Modeling",
@@ -634,7 +634,7 @@
     "year": 3,
     "semester": 1,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Introduction to Mixed Realities",
@@ -647,7 +647,7 @@
     "year": 3,
     "semester": 1,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Special Chapters in Operating Systems",
@@ -660,7 +660,7 @@
     "year": 3,
     "semester": 1,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Multiprocessor Programming Techniques",
@@ -673,7 +673,7 @@
     "year": 3,
     "semester": 1,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Competitive Programming",
@@ -686,7 +686,7 @@
     "year": 3,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Industry Training II",
@@ -699,7 +699,7 @@
     "year": 3,
     "semester": 1,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Numeric Calculus",
@@ -712,7 +712,7 @@
     "year": 3,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Computer Graphics",
@@ -725,7 +725,7 @@
     "year": 3,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Diploma Project Development ",
@@ -738,7 +738,7 @@
     "year": 3,
     "semester": 2,
     "type": 0,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Rule Based Programming",
@@ -751,7 +751,7 @@
     "year": 3,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Mobile Development",
@@ -764,7 +764,7 @@
     "year": 3,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Computational Aspects on the Number Theory",
@@ -777,7 +777,7 @@
     "year": 3,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Game Design",
@@ -790,7 +790,7 @@
     "year": 3,
     "semester": 2,
     "type": 1,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Psychology of the Professional Communication in IT Industry",
@@ -803,7 +803,7 @@
     "year": 3,
     "semester": 2,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Cloud Computing",
@@ -816,7 +816,7 @@
     "year": 3,
     "semester": 2,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Human-Computer Interaction ",
@@ -829,7 +829,7 @@
     "year": 3,
     "semester": 2,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Social Media Networks Analysis",
@@ -842,7 +842,7 @@
     "year": 3,
     "semester": 2,
     "type": 2,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Petri Nets and Applications",
@@ -855,7 +855,7 @@
     "year": 3,
     "semester": 2,
     "type": 3,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Smart Cards and Their Applications",
@@ -868,7 +868,7 @@
     "year": 3,
     "semester": 2,
     "type": 3,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Automotive specific software engineering",
@@ -881,7 +881,7 @@
     "year": 3,
     "semester": 2,
     "type": 3,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Modeling of Digital Systems ",
@@ -894,7 +894,7 @@
     "year": 3,
     "semester": 2,
     "type": 3,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   },
   {
     "name": "Competitive Programming",
@@ -907,6 +907,6 @@
     "year": 3,
     "semester": 2,
     "type": 5,
-    "updated": "2021-01-03T22:00:00.000Z"
+    "updatedAt": "2021-01-03T22:00:00.000Z"
   }
 ]

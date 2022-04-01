@@ -21,4 +21,5 @@ export async function connectToMongo() {
 
 export enum MongoCollection {
     MATERIALS = 'materials',
+    FEEDBACK = 'feedback',
 }

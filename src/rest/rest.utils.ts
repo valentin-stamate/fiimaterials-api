@@ -1,6 +1,7 @@
 export enum ResponseMessage {
     INCOMPLETE_FORM = 'Incomplete form',
     ADMIN_ACCESS_ONLY = 'Admin access only',
+    FORM_SHOULD_MEET_THE_CONSTRAINTS = 'The form should meet the constraints',
 }
 
 /** Contains the request responses */

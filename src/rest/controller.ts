@@ -3,6 +3,7 @@ import {Service} from "../service/service";
 import {ResponseError} from "./middleware";
 import {ResponseMessage, StatusCode} from "./rest.utils";
 import {UploadedFile} from "express-fileupload";
+import {Feedback} from "../models";
 
 export class Controller {
 
@@ -10,6 +11,36 @@ export class Controller {
         try {
             const data = await Service.getMaterials();
             res.end(JSON.stringify(data));
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    static async getFeedback(req: Request<any>, res: Response, next: NextFunction) {
+        try {
+            const data = await Service.getFeedback();
+            res.end(JSON.stringify(data));
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    static async addFeedback(req: Request<any>, res: Response, next: NextFunction) {
+        try {
+            const body = req.body;
+
+            const data: Feedback = {
+                name: body.name,
+                feedback: body.feedback,
+                response: '',
+                solved: false,
+                createdAt: new Date(),
+            };
+
+            await Service.addFeedback(data);
+
+            res.statusCode = StatusCode.CREATED;
+            res.end();
         } catch (err) {
             next(err);
         }
