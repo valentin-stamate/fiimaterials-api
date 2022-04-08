@@ -1,5 +1,5 @@
 export enum Endpoints {
-    REFRESH_MATERIALS = '/refresh-materials',
-    MATERIALS = '/materials',
-    FEEDBACK = '/feedback',
+    REFRESH_MATERIALS = '/api/refresh-materials',
+    MATERIALS = '/api/materials',
+    FEEDBACK = '/api/feedback',
 }
