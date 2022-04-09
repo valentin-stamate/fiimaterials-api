@@ -29,7 +29,7 @@ app.set('json spaces', 4);
 
 // Handle logs in console during development
 if (process.env.NODE_ENV === 'development' || env.NODE_ENV === 'development') {
-    app.use(cors({origin: ['http://localhost:4200']}));
+    app.use(cors({origin: ['http://localhost:4200', 'https://fiimaterials.valentinstamate.com']}));
 }
 
 // Handle security and origin in production
