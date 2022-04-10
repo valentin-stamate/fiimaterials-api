@@ -6,16 +6,35 @@ import {ResponseMessage, StatusCode} from "../rest/rest.utils";
 
 export class Service {
 
-    static async getMaterials(): Promise<Class[]> {
+    static async getMaterials(): Promise<any> {
         const materialsCollection = database.collection(MongoCollection.MATERIALS);
         const materialsCursor = await materialsCollection.find();
-        return (await materialsCursor.toArray()) as unknown as Class[];
+        const classes = (await materialsCursor.toArray()) as unknown as Class[];
+        classes.sort((itemA, itemB) => itemA.count - itemB.count);
+
+        /* Here the classes will be put into their specific year an semester */
+        const classesMap = new Map<string, Class[]>();
+
+        for (let item of classes) {
+            const key = `${item.year}${item.semester}${item.type}`;
+
+            const mapList = classesMap.get(key);
+
+            if (!mapList) {
+                classesMap.set(key, [item]);
+                continue;
+            }
+
+            mapList.push(item);
+        }
+
+        return Object.fromEntries(classesMap);
     }
 
     static async refreshMaterials(jsonFile: UploadedFile): Promise<void> {
         const jsonStr = jsonFile.data.toString('utf8');
         const materials: Class[] = JSON.parse(jsonStr).map((item: Class) => {
-            return {...item, updatedAt: new Date(item.updatedAt)};
+            return {...item};
         });
 
         const materialsCollection = database.collection(MongoCollection.MATERIALS);

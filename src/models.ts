@@ -1,8 +1,8 @@
 export interface Class {
+    count: number;
     name: string;
     short: string;
     credits: number
-    about: string;
 
     materials: string;
     password: string;
@@ -12,8 +12,6 @@ export interface Class {
     semester: number;
 
     type: number;
-
-    updatedAt: Date;
 }
 
 export interface Feedback {
@@ -23,6 +21,14 @@ export interface Feedback {
 
     solved: boolean;
     createdAt: Date;
+}
+
+export enum ClassType {
+    NORMAL= 1,
+    OPTIONAL_1 = 2,
+    OPTIONAL_2 = 3,
+    OPTIONAL_3 = 4,
+    FACULTY = 5,
 }
 
 export class FeedbackUtil {
