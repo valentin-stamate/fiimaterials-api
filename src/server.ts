@@ -43,8 +43,8 @@ if (process.env.NODE_ENV === 'production' || env.NODE_ENV === 'production') {
 
 /* Any user */
 app.get(Endpoints.MATERIALS, Middleware.visitorMiddleware, Controller.getMaterials);
-app.get(Endpoints.FEEDBACK, Middleware.visitorMiddleware, Controller.getFeedback);
-app.post(Endpoints.FEEDBACK, Middleware.visitorMiddleware, Controller.addFeedback);
+// app.get(Endpoints.FEEDBACK, Middleware.visitorMiddleware, Controller.getFeedback);
+// app.post(Endpoints.FEEDBACK, Middleware.visitorMiddleware, Controller.addFeedback);
 
 /* Admin only */
 app.post(Endpoints.REFRESH_MATERIALS, Middleware.adminMiddleware, Controller.refreshMaterials);
